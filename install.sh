@@ -51,24 +51,26 @@ fi
 
 read -r -p "What is your github.com username? " githubuser
 
-running "replacing items in .gitconfig with your info ($COL_YELLOW$fullname, $email, $githubuser$COL_RESET)"
+running "replacing items in .gitconfig and .hgrc with your info ($COL_YELLOW$fullname, $email, $githubuser$COL_RESET)"
 
 # test if gnu-sed or osx sed
 
-sed -i 's/Adam Eivy/'$firstname' '$lastname'/' .gitconfig > /dev/null 2>&1 | true
+sed -i 's/Thomas Tardy/'$firstname' '$lastname'/' .gitconfig > /dev/null 2>&1 | true
 if [[ ${PIPESTATUS[0]} != 0 ]]; then
   echo
   running "looks like you are using OSX sed rather than gnu-sed, accommodating"
-  sed -i '' 's/Adam Eivy/'$firstname' '$lastname'/' .gitconfig;
-  sed -i '' 's/adam.eivy@disney.com/'$email'/' .gitconfig;
-  sed -i '' 's/atomantic/'$githubuser'/' .gitconfig;
-  sed -i '' 's/antic/'$(whoami)'/g' .zshrc;ok
+  sed -i '' 's/Thomas Tardy/'$firstname' '$lastname'/' .gitconfig;
+  sed -i '' 's/thomas.tardy@gmail.com/'$email'/' .gitconfig;
+  sed -i '' 's/wibbo/'$githubuser'/' .gitconfig;
+  sed -i '' 's/Thomas Tardy <thomas.tardy@gmail.com>/'$firstname' '$lastname' <'$email'>/' .hgrc;
+  sed -i '' 's/thomas/'$(whoami)'/g' .zshrc;ok
 else
   echo
   bot "looks like you are already using gnu-sed. woot!"
-  sed -i 's/adam.eivy@disney.com/'$email'/' .gitconfig;
-  sed -i 's/atomantic/'$githubuser'/' .gitconfig;
-  sed -i 's/antic/'$(whoami)'/g' .zshrc;ok
+  sed -i 's/thomas.tardy@gmail.com/'$email'/' .gitconfig;
+  sed -i 's/wibbo/'$githubuser'/' .gitconfig;
+  sed -i 's/Thomas Tardy <thomas.tardy@gmail.com>/'$firstname' '$lastname' <'$email'>/' .gitconfig
+  sed -i 's/thomas/'$(whoami)'/g' .zshrc;ok
 fi
 
 # read -r -p "OK? [Y/n] " response
@@ -115,6 +117,8 @@ symlinkifne .crontab
 symlinkifne .gemrc
 symlinkifne .gitconfig
 symlinkifne .gitignore
+symlinkifne .hgignore
+symlinkifne .hgrc
 symlinkifne .profile
 symlinkifne .rvmrc
 symlinkifne .screenrc

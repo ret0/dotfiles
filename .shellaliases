@@ -16,11 +16,11 @@ alias to.temp='cd ${MYTEMP}'
 alias to.downloads='cd ${MYDOWNLOADS}'
 alias to.dropbox='cd ~/Dropbox'
 alias to.docs='cd ${MYDOCUMENTS}'
-alias to.code='cd ${MYCODE}'
-alias to.scratch='cd ${MYSCRATCH}'
+alias to.projects='cd ${MYPROJECTS}'
 
-alias to.devapps='cd ${MYDEVAPPS}'
-
+#########################################
+# Commands for maven
+# TODO tardy
 
 #################################
 # Simple Program Name Shortening

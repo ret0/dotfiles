@@ -1,0 +1,6 @@
+[ui]
+	username = Thomas Tardy <thomas.tardy@gmail.com>
+	ignore = ~/.hgignore
+	editor = vim
+
+# TODO tardy

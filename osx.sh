@@ -20,7 +20,7 @@ running "checking homebrew install"
 brew_bin=$(which brew) 2>&1 > /dev/null
 if [[ $? != 0 ]]; then
 	action "installing homebrew"
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     if [[ $? != 0 ]]; then
     	error "unable to install homebrew, script $0 abort!"
     	exit -1
@@ -68,8 +68,8 @@ require_brew findutils
 
 # Install Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
-#install bash
-#install bash-completion
+install bash
+install bash-completion
 
 # Install RingoJS and Narwhal
 # Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
@@ -82,7 +82,7 @@ require_brew ack
 #require_brew beanstalkd
 # ln -sfv /usr/local/opt/beanstalk/*.plist ~/Library/LaunchAgents
 # launchctl load ~/Library/LaunchAgents/homebrew.mxcl.beanstalk.plist
-# require_brew boot2docker
+require_brew boot2docker
 # dos2unix converts windows newlines to unix newlines
 require_brew dos2unix
 # require_brew fig
@@ -95,11 +95,12 @@ require_brew gifsicle
 require_brew git
 # yes, yes, use git-flow, please :)
 require_brew git-flow
+require_brew mercurial
 # why is everyone still not using GPG?
 require_brew gnupg
 # Install GNU `sed`, overwriting the built-in `sed`
 # so we can do "sed -i 's/foo/bar/' file" instead of "sed -i '' 's/foo/bar/' file"
-require_brew gnu-sed --default-names
+require_brew gnu-sed --with-default-names
 # better, more recent grep
 require_brew homebrew/dupes/grep
 require_brew hub
@@ -122,7 +123,7 @@ require_brew ttyrec
 require_brew vim --override-system-vi
 require_brew watch
 # Install wget with IRI support
-require_brew wget --enable-iri
+require_brew wget --with-iri
 
 bot "if you would like to start memcached at login, run this:"
 echo "ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents"
@@ -137,14 +138,14 @@ brew tap caskroom/versions > /dev/null 2>&1
 
 # cloud storage
 #require_cask amazon-cloud-drive
-require_cask box-sync
+#require_cask box-sync
 #require_cask dropbox
 #require_cask evernote
 #require_cask skydrive
 
 # communication
 #require_cask adium
-require_cask slack
+#require_cask slack
 
 # tools
 #require_cask comicbooklover
@@ -154,23 +155,23 @@ require_cask github
 require_cask gpgtools
 require_cask ireadfast
 require_cask iterm2
-require_cask lastpass-universal
+#require_cask lastpass-universal
 #require_cask macvim
 require_cask sizeup
 #require_cask simple-comic
 #require_cask sketchup
-require_cask sublime-text
-require_cask the-unarchiver
+require_cask sublime-text3
+#require_cask the-unarchiver
 #require_cask transmission
-require_cask vlc
-require_cask xquartz
+#require_cask vlc
+#require_cask xquartz
 
 # development browsers
-require_cask breach
+#require_cask breach
 require_cask firefox
 #require_cask firefox-aurora
-require_cask google-chrome
-require_cask google-chrome-canary
+#require_cask google-chrome
+#require_cask google-chrome-canary
 require_cask torbrowser
 
 # virtal machines
@@ -266,12 +267,12 @@ sudo chflags uchg /Private/var/vm/sleepimage;ok
 #running "Add a spacer to the right side of the Dock (where the Trash is)"
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}';ok
 
-running "Set a custom wallpaper image"
+#running "Set a custom wallpaper image"
 # `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
-rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-sudo ln -s ~/.dotfiles/img/wallpaper.jpg /System/Library/CoreServices/DefaultDesktop.jpg;ok
+#rm -rf ~/Library/Application Support/Dock/desktoppicture.db
+#sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
+#sudo ln -s ~/.dotfiles/img/wallpaper.jpg /System/Library/CoreServices/DefaultDesktop.jpg;ok
 
 
 ################################################
@@ -299,6 +300,7 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/User.menu"
 done;
+# TODO Tardy is this working
 defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
@@ -412,7 +414,7 @@ defaults write NSGlobalDomain KeyRepeat -int 0;
 
 running "Set language and text formats (english/US)"
 defaults write NSGlobalDomain AppleLanguages -array "en"
-defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleLocale -string "de_CH@currency=CHF"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true;ok
 
@@ -849,20 +851,20 @@ cp -r configs/Preferences.sublime-settings ~/Library/Application\ Support/Sublim
 bot "NPM Globals..."
 ###############################################################################
 
-require_npm antic
+#require_npm antic
 require_npm bower
 # http://ionicframework.com/
-require_npm cordova
-require_npm ionic
+#require_npm cordova
+#require_npm ionic
 # https://github.com/markdalgleish/bespoke.js
-require_npm generator-bespoke
+#require_npm generator-bespoke
 require_npm grunt
 require_npm gulp
 require_npm jshint
 # http://devo.ps/blog/goodbye-node-forever-hello-pm2/
-require_npm pm2
+#require_npm pm2
 require_npm prettyjson
-require_npm supervisor
+#require_npm supervisor
 # https://github.com/sindresorhus/trash
 require_npm trash
 # https://github.com/MrRio/vtop
@@ -872,7 +874,7 @@ require_npm yo
 ###############################################################################
 bot "Ruby Gems..."
 ###############################################################################
-require_gem git-up
+#require_gem git-up
 
 
 ###############################################################################
