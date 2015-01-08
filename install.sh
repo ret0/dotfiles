@@ -51,7 +51,7 @@ fi
 
 read -r -p "What is your github.com username? " githubuser
 
-running "replacing items in .gitconfig and .hgrc with your info ($COL_YELLOW$fullname, $email, $githubuser$COL_RESET)"
+running "replacing items in .gitconfig with your info ($COL_YELLOW$fullname, $email, $githubuser$COL_RESET)"
 
 # test if gnu-sed or osx sed
 
@@ -62,14 +62,12 @@ if [[ ${PIPESTATUS[0]} != 0 ]]; then
   sed -i '' 's/Thomas Tardy/'$firstname' '$lastname'/' .gitconfig;
   sed -i '' 's/thomas.tardy@gmail.com/'$email'/' .gitconfig;
   sed -i '' 's/wibbo/'$githubuser'/' .gitconfig;
-  sed -i '' 's/Thomas Tardy <thomas.tardy@gmail.com>/'$firstname' '$lastname' <'$email'>/' .hgrc;
   sed -i '' 's/thomas/'$(whoami)'/g' .zshrc;ok
 else
   echo
   bot "looks like you are already using gnu-sed. woot!"
   sed -i 's/thomas.tardy@gmail.com/'$email'/' .gitconfig;
   sed -i 's/wibbo/'$githubuser'/' .gitconfig;
-  sed -i 's/Thomas Tardy <thomas.tardy@gmail.com>/'$firstname' '$lastname' <'$email'>/' .gitconfig
   sed -i 's/thomas/'$(whoami)'/g' .zshrc;ok
 fi
 
@@ -117,8 +115,6 @@ symlinkifne .crontab
 symlinkifne .gemrc
 symlinkifne .gitconfig
 symlinkifne .gitignore
-symlinkifne .hgignore
-symlinkifne .hgrc
 symlinkifne .profile
 symlinkifne .rvmrc
 symlinkifne .screenrc
