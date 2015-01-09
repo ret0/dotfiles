@@ -1,0 +1,5 @@
+{
+    "patterns": {
+        "TODO": "TODO[\\s]*?[\\s]*(?P<todo>.*)$"
+    }
+}

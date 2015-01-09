@@ -20,13 +20,17 @@ alias to.projects='cd ${MYPROJECTS}'
 
 #########################################
 # Commands for maven
-# TODO tardy
+alias mvn.package.prod="mvn -Pprod package"
+alias mvn.package.prod.skip="mvn -o -DskipTests -Pprod package"
+
+#########################################
+# Commands to forwart mssql port to parallels
+alias mssql.ncat='sudo ncat --sh-exec "ncat 10.211.55.4 1433" -l 1433 --keep-open'
 
 #################################
 # Simple Program Name Shortening
 alias aq=aquamacs
 alias g=git
-
 
 #############################
 # Utilities
@@ -72,7 +76,9 @@ alias ls='ls -G -h -p '
 alias ll='ls -l -G -h -p '
 
 # Restart Apache on Mac
-alias apacherestart="sudo /usr/sbin/apachectl restart"
+alias apache.start="sudo apachectl start"
+alias apache.stop="sudo apachectl stop"
+alias apache.restart="sudo apachectl restart"
 
 #Personal Commands
 alias game.seek='txt="";for i in {1..20};do txt=$txt"$i. ";done;txt=$txt" Ready or not, here I come";say $txt'

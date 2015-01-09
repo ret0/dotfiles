@@ -87,48 +87,48 @@ require_brew boot2docker
 require_brew dos2unix
 # require_brew fig
 # fortune command--I source this as a better motd :)
-require_brew fortune
-require_brew gawk
+#require_brew fortune
+#require_brew gawk
 # http://www.lcdf.org/gifsicle/ (because I'm a gif junky)
-require_brew gifsicle
+#require_brew gifsicle
 # skip those GUI clients, git command-line all the way
 require_brew git
 # yes, yes, use git-flow, please :)
 require_brew git-flow
-require_brew mercurial
+#require_brew mercurial
 # why is everyone still not using GPG?
-require_brew gnupg
+#require_brew gnupg
 # Install GNU `sed`, overwriting the built-in `sed`
 # so we can do "sed -i 's/foo/bar/' file" instead of "sed -i '' 's/foo/bar/' file"
 require_brew gnu-sed --with-default-names
 # better, more recent grep
 require_brew homebrew/dupes/grep
-require_brew hub
+#require_brew hub
 require_brew imagemagick
-require_brew imagesnap
+#require_brew imagesnap
 # jq is a JSON grep
-require_brew jq
+#require_brew jq
 # http://maven.apache.org/
 require_brew maven
-require_brew memcached
+#require_brew memcached
 require_brew nmap
 require_brew node
-require_brew redis
+#require_brew redis
 # better/more recent version of screen
 require_brew homebrew/dupes/screen
-require_brew tig
+#require_brew tig
 require_brew tree
-require_brew ttyrec
+#require_brew ttyrec
 # better, more recent vim
 require_brew vim --override-system-vi
-require_brew watch
+#require_brew watch
 # Install wget with IRI support
 require_brew wget --with-iri
 
-bot "if you would like to start memcached at login, run this:"
-echo "ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents"
-bot "if you would like to start memcached now, run this:"
-echo "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
+#bot "if you would like to start memcached at login, run this:"
+#echo "ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents"
+#bot "if you would like to start memcached now, run this:"
+#echo "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
 
 ###############################################################################
 # Native Apps (via brew cask)                                                 #
@@ -153,14 +153,15 @@ require_cask fantastical
 # tools
 require_cask appcleaner
 require_cask sourcetree
-require_cask teamviewer # check
-require_cask filezilla # check
+require_cask macpass
+#require_cask teamviewer # check
+require_cask cyberduck # check
 require_cask freefilesync # check
 require_cask disk-inventory-x # check
 #require_cask comicbooklover
 require_cask diffmerge # check
 #require_cask flash-player
-require_cask github
+#require_cask github
 #require_cask gpgtools
 #require_cask ireadfast
 require_cask iterm2
@@ -181,18 +182,18 @@ require_cask firefox
 #require_cask firefox-aurora
 require_cask google-chrome # move to global
 #require_cask google-chrome-canary
-require_cask torbrowser
+#require_cask torbrowser
 
 # virtal machines
 require_cask virtualbox
 # chef-dk, berkshelf, etc
-require_cask chefdk
+#require_cask chefdk
 # vagrant for running dev environments using docker images
-require_cask vagrant # # | grep Caskroom | sed "s/.*'\(.*\)'.*/open \1\/Vagrant.pkg/g" | sh
+#require_cask vagrant # # | grep Caskroom | sed "s/.*'\(.*\)'.*/open \1\/Vagrant.pkg/g" | sh
 
 # sundries
-require_cask garmin-express
-require_cask logitech-myharmony
+#require_cask garmin-express
+#require_cask logitech-myharmony
 
 bot "Alright, cleaning up homebrew cache..."
 # Remove outdated versions from the cellar
@@ -313,7 +314,7 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/User.menu"
 done;
-# TODO Tardy is this working
+# TODO: Tardy is this working
 defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
@@ -531,8 +532,8 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false;ok
 #running "Empty Trash securely by default"
 #defaults write com.apple.finder EmptyTrashSecurely -bool true;ok
 
-running "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true;ok
+#running "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
+#defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true;ok
 
 running "Show the ~/Library folder"
 chflags nohidden ~/Library;ok
@@ -574,7 +575,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1;ok
 
 running "Don’t group windows by application in Mission Control"
 # (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false;ok
+defaults write com.apple.dock expose-group-bay-app -bool false;ok
 
 running "Disable Dashboard"
 defaults write com.apple.dashboard mcx-disabled -bool true;ok
@@ -691,8 +692,8 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 running "Disable inline attachments (just show the icons)"
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true;ok
 
-running "Disable automatic spell checking"
-defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled";ok
+#running "Disable automatic spell checking"
+#defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled";ok
 
 ###############################################################################
 bot "Spotlight"
@@ -865,6 +866,7 @@ bot "Sublime Text"
 
 running "Install Sublime Text settings"
 cp -r configs/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings 2> /dev/null;ok
+cp -r configs/TodoReview.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/TodoReview.sublime-settings 2> /dev/null;ok
 
 ###############################################################################
 bot "NPM Globals..."
@@ -878,7 +880,7 @@ require_npm bower
 # https://github.com/markdalgleish/bespoke.js
 #require_npm generator-bespoke
 require_npm grunt
-require_npm gulp
+#require_npm gulp
 require_npm jshint
 # http://devo.ps/blog/goodbye-node-forever-hello-pm2/
 #require_npm pm2
