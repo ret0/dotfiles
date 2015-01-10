@@ -1,0 +1,35 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
+	"installed_packages":
+	[
+		"AngularJS",
+		"AutoFileName",
+		"Bootstrap 3 Snippets",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"ColorPicker",
+		"EasyDiff",
+		"GitGutter",
+		"HTML Snippets",
+		"HTML5",
+		"Indent XML",
+		"jQuery",
+		"JSLint",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Package Control",
+		"Pretty JSON",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"TodoReview",
+		"Twitter Bootstrap Snippets"
+	]
+}

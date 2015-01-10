@@ -168,6 +168,7 @@ require_cask iterm2
 #require_cask lastpass-universal
 #require_cask macvim
 require_cask sizeup # check
+require_cask cinch # check
 #require_cask simple-comic
 #require_cask sketchup
 require_cask sublime-text3
@@ -866,6 +867,7 @@ bot "Sublime Text"
 
 running "Install Sublime Text settings"
 cp -r configs/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings 2> /dev/null;ok
+cp -r configs/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings 2> /dev/null;ok
 cp -r configs/TodoReview.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/TodoReview.sublime-settings 2> /dev/null;ok
 
 ###############################################################################
