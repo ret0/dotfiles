@@ -140,7 +140,7 @@ brew tap caskroom/versions > /dev/null 2>&1
 #require_cask amazon-cloud-drive
 #require_cask box-sync
 #require_cask dropbox
-require_cask google-drive # move to global
+require_cask google-drive # move to global?
 
 # communication
 #require_cask adium
@@ -154,12 +154,12 @@ require_cask fantastical
 require_cask appcleaner
 require_cask sourcetree
 require_cask macpass
-#require_cask teamviewer # check
-require_cask cyberduck # check
-require_cask freefilesync # check
-require_cask disk-inventory-x # check
+require_cask teamviewer
+require_cask transmit
+#require_cask freefilesync
+require_cask disk-inventory-x
 #require_cask comicbooklover
-require_cask diffmerge # check
+require_cask diffmerge
 #require_cask flash-player
 #require_cask github
 #require_cask gpgtools
@@ -167,21 +167,21 @@ require_cask diffmerge # check
 require_cask iterm2
 #require_cask lastpass-universal
 #require_cask macvim
-require_cask sizeup # check
-require_cask cinch # check
+require_cask sizeup
+require_cask cinch
 #require_cask simple-comic
 #require_cask sketchup
 require_cask sublime-text3
 require_cask the-unarchiver
 #require_cask transmission
-require_cask vlc # move to global
+require_cask vlc # move to global?
 #require_cask xquartz
 
 # development browsers
 #require_cask breach
 require_cask firefox
 #require_cask firefox-aurora
-require_cask google-chrome # move to global
+require_cask google-chrome # move to global?
 #require_cask google-chrome-canary
 #require_cask torbrowser
 
