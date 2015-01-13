@@ -2,13 +2,14 @@
 " Must Have
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible " get out of horrible vi-compatible mode
+syntax on " syntax highlighting on
 if has('gui_running')
     set background=light
 else
     set background=dark
 endif
+let g:solarized_termcolors=256
 colorscheme solarized
-syntax on " syntax highlighting on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -90,7 +91,7 @@ set preserveindent " but above all -- follow the conventions laid before us
 set ignorecase " case insensitive by default
 set smartcase " if there are caps, go case-sensitive
 set completeopt=menu,longest,preview " improve the way autocomplete works
-set cursorcolumn " show the current column
+"set cursorcolumn " show the current column
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
@@ -132,9 +133,9 @@ let b:match_ignorecase = 1
 let perl_extended_vars=1 " highlight advanced perl vars inside strings
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pathogen 
+" Pathogen
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Functions
@@ -157,7 +158,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Useful abbrevs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr> 
+iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autocommands

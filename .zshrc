@@ -22,32 +22,32 @@ export CASE_SENSITIVE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew github osx rvm compleat dirpersist gem git-flow ssh-agent cloudapp colorize)
+plugins=(bower brew brew-cask command-not-found compleat dirpersist docker gem git git-flow github jira mvn osx rvm screen z)
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/.nvm/nvm.sh
+#source ~/.nvm/nvm.sh
 
 # Customize to your needs...
 unsetopt correct
 
-export PATH="/Users/thomas/.rbenv/shims:${PATH}"
-source "/usr/local/Cellar/rbenv/0.4.0/libexec/../completions/rbenv.zsh"
-rbenv rehash 2>/dev/null
-rbenv() {
-  typeset command
-  command="$1"
-  if [ "$#" -gt 0 ]; then
-    shift
-  fi
-
-  case "$command" in
-  rehash|shell)
-    eval `rbenv "sh-$command" "$@"`;;
-  *)
-    command rbenv "$command" "$@";;
-  esac
-}
+#export PATH="/Users/thomas/.rbenv/shims:${PATH}"
+#source "/usr/local/Cellar/rbenv/0.4.0/libexec/../completions/rbenv.zsh"
+#rbenv rehash 2>/dev/null
+#rbenv() {
+#  typeset command
+#  command="$1"
+#  if [ "$#" -gt 0 ]; then
+#    shift
+#  fi
+#
+#  case "$command" in
+#  rehash|shell)
+#    eval `rbenv "sh-$command" "$@"`;;
+#  *)
+#    command rbenv "$command" "$@";;
+#  esac
+#}
 
 # run fortune on new terminal :)
 fortune
