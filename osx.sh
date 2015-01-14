@@ -110,6 +110,7 @@ require_brew imagemagick
 #require_brew jq
 # http://maven.apache.org/
 require_brew maven
+require_brew mysql
 #require_brew memcached
 require_brew nmap
 require_brew node
@@ -156,6 +157,7 @@ require_cask sourcetree
 require_cask macpass
 require_cask teamviewer
 require_cask transmit
+require_cask mysqlworkbench
 #require_cask freefilesync
 require_cask disk-inventory-x
 #require_cask comicbooklover
@@ -897,6 +899,7 @@ require_npm yo
 bot "Ruby Gems..."
 ###############################################################################
 #require_gem git-up
+require_gem compass
 
 
 ###############################################################################
