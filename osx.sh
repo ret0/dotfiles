@@ -155,7 +155,7 @@ require_cask fantastical
 require_cask appcleaner
 require_cask sourcetree
 require_cask macpass
-require_cask teamviewer
+#require_cask teamviewer
 require_cask transmit
 require_cask superduper
 require_cask mysqlworkbench
