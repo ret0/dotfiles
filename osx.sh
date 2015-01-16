@@ -184,7 +184,7 @@ require_cask vlc # move to global?
 #require_cask breach
 require_cask firefox
 #require_cask firefox-aurora
-require_cask google-chrome # move to global?
+#require_cask google-chrome # move to global?
 #require_cask google-chrome-canary
 #require_cask torbrowser
 
