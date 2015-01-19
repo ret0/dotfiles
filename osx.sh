@@ -896,6 +896,7 @@ require_npm trash
 # https://github.com/MrRio/vtop
 require_npm vtop
 require_npm yo
+require_npm generator-jhipster
 
 ###############################################################################
 bot "Ruby Gems..."
