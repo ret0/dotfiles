@@ -175,6 +175,7 @@ require_cask cinch
 #require_cask simple-comic
 #require_cask sketchup
 require_cask sublime-text3
+require_cask atom
 require_cask the-unarchiver
 #require_cask transmission
 require_cask vlc # move to global?

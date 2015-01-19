@@ -111,6 +111,7 @@ function symlinkifne {
 
 bot "creating symlinks for project dotfiles..."
 
+symlinkifne .atom
 symlinkifne .crontab
 symlinkifne .gemrc
 symlinkifne .gitconfig
