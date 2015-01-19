@@ -884,7 +884,7 @@ require_npm bower
 #require_npm ionic
 # https://github.com/markdalgleish/bespoke.js
 #require_npm generator-bespoke
-require_npm grunt
+require_npm grunt-cli
 #require_npm gulp
 require_npm jshint
 # http://devo.ps/blog/goodbye-node-forever-hello-pm2/
