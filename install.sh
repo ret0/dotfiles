@@ -113,6 +113,9 @@ bot "creating symlinks for project dotfiles..."
 
 symlinkifne .atom
 symlinkifne .crontab
+symlinkifne .hgignore
+symlinkifne .hgignore_global
+symlinkifne .hgrc
 symlinkifne .gemrc
 symlinkifne .gitconfig
 symlinkifne .gitignore

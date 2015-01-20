@@ -1,0 +1,6 @@
+[ui]
+username = Thomas Tardy<tardy@mptechnology.ch>
+ignore = ~/.hgignore
+
+[hooks]
+precommit = python:.hg/rename-story-description.py:prefix_commit_message
