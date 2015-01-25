@@ -111,7 +111,7 @@ function symlinkifne {
 
 bot "creating symlinks for project dotfiles..."
 
-symlinkifne .atom
+#symlinkifne .atom
 symlinkifne .crontab
 symlinkifne .hgignore
 symlinkifne .hgignore_global
