@@ -481,11 +481,11 @@ defaults write com.apple.finder DisableAllAnimations -bool true;ok
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/";ok
 
-running "Show hidden files by default"
-defaults write com.apple.finder AppleShowAllFiles -bool true;ok
+#running "Show hidden files by default"
+#defaults write com.apple.finder AppleShowAllFiles -bool true;ok
 
-running "Hide hidden files on Desktop"
-defaults write com.apple.finder CreateDesktop -bool false;ok
+#running "Hide hidden files on Desktop"
+#defaults write com.apple.finder CreateDesktop -bool false;ok
 
 running "Show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true;ok
