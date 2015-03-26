@@ -154,7 +154,7 @@ require_cask fantastical
 # tools
 require_cask appcleaner
 require_cask sourcetree
-require_cask macpass
+#require_cask macpass
 #require_cask teamviewer
 require_cask transmit
 require_cask superduper
