@@ -4,3 +4,16 @@ ignore = ~/.hgignore
 
 [hooks]
 precommit = python:.hg/rename-story-description.py:prefix_commit_message
+
+[extensions]
+eol =
+color =
+progress =
+
+[eol]
+native = LF
+only-consistent = False
+
+[color]
+# valid modes are win32, ansi, auto, off
+mode = auto
