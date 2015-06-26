@@ -1,11 +1,13 @@
 [ui]
-username = Thomas Tardy<tardy@mptechnology.ch>
+# username = Thomas Tardy <tardy@mptechnology.ch>
+username = tardy@mptechnology.ch
 ignore = ~/.hgignore
 
 [hooks]
 precommit = python:.hg/rename-story-description.py:prefix_commit_message
 
 [extensions]
+rebase =
 eol =
 color =
 progress =
@@ -17,3 +19,6 @@ only-consistent = False
 [color]
 # valid modes are win32, ansi, auto, off
 mode = auto
+
+[alias]
+pull = pull --rebase
