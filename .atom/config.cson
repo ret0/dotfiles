@@ -1,6 +1,5 @@
 "*":
   editor:
-    fontSize: 14
     showIndentGuide: true
     invisibles: {}
   core:
@@ -14,6 +13,10 @@
     userId: "24cf6d71-d914-eb17-b13d-54a92474138f"
   welcome:
     showOnStartup: false
+  "xml-formatter": {}
+  "merge-conflicts": {}
+  minimap: {}
+  pigments: {}
 ".angular.html.text":
   editor:
     tabLength: 2

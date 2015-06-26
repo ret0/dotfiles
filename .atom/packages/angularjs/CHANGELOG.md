@@ -1,3 +1,20 @@
+### 0.2.1 (2015-05-22)
+
+#### Bug fixes
+* fix Atom update problem that Atom doen't update
+  v0.2.0 and still use v0.1.0.(#39)
+* fix syntax highlight error for ng-options(#20)
+
+### 0.2.0 (2015-02-08)
+
+#### Features
+* upgrade to be compatible with atom v1.0 API.
+  please see [Upgrading your package to 1.0 APIs]
+  (https://atom.io/docs/latest/upgrading/upgrading-your-package) for more details.
+
+#### Bug fixes
+* fix syntax highlight error for angular directives
+
 ### 0.1.0 (2015-01-02)
 
 #### Features
