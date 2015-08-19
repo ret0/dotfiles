@@ -21,7 +21,9 @@ alias to.projects='cd ${MYPROJECTS}'
 #########################################
 # Commands for maven
 alias mvn.package.prod="mvn -Pprod package"
-alias mvn.package.prod.skip="mvn -DskipTests -Pprod package"
+alias mvn.package.prod.skip="mvn -Dmaven.test.skip=true -Pprod package"
+alias mvn.install.prod="mvn -Pprod install"
+alias mvn.install.prod.skip="mvn -Dmaven.test.skip=true -Pprod install"
 
 #########################################
 # Commands to forwart mssql port to parallels
