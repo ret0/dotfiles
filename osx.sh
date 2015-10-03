@@ -155,9 +155,9 @@ require_cask fantastical
 require_cask appcleaner
 require_cask sourcetree
 #require_cask macpass
-#require_cask teamviewer
+require_cask teamviewer
 require_cask transmit
-require_cask superduper
+# require_cask superduper
 require_cask mysqlworkbench
 #require_cask freefilesync
 require_cask disk-inventory-x
@@ -170,8 +170,12 @@ require_cask diffmerge
 require_cask iterm2
 #require_cask lastpass-universal
 #require_cask macvim
-require_cask sizeup
-require_cask cinch
+#require_cask sizeup
+#require_cask cinch
+require_cask moom
+require_cask hipchat
+require_cask keepassx
+require_cask time-sink
 #require_cask simple-comic
 #require_cask sketchup
 require_cask sublime-text3
