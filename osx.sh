@@ -149,7 +149,8 @@ require_cask google-drive # move to global?
 
 # productivity
 require_cask evernote
-require_cask fantastical
+require_cask skitch
+#require_cask fantastical
 
 # tools
 require_cask appcleaner
@@ -184,6 +185,8 @@ require_cask the-unarchiver
 #require_cask transmission
 require_cask vlc # move to global?
 #require_cask xquartz
+require_cask crashplan
+require_cask spotify
 
 # development browsers
 #require_cask breach
