@@ -172,7 +172,7 @@ require_cask iterm2
 #require_cask lastpass-universal
 #require_cask macvim
 #require_cask sizeup
-#require_cask cinch
+require_cask cinch
 require_cask moom
 require_cask hipchat
 require_cask keepassx
