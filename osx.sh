@@ -187,6 +187,7 @@ require_cask vlc # move to global?
 #require_cask xquartz
 require_cask crashplan
 require_cask spotify
+require_cask flux
 
 # development browsers
 #require_cask breach
