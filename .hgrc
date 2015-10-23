@@ -1,6 +1,6 @@
 [ui]
-# username = Thomas Tardy <tardy@mptechnology.ch>
-username = tardy@mptechnology.ch
+username = Thomas Tardy <tardy@mptechnology.ch>
+# username = tardy@mptechnology.ch
 ignore = ~/.hgignore
 
 [hooks]
