@@ -104,10 +104,10 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [difftool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/diffmerge/4.2.0.697/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/diffmerge/4.2.0.697/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean %f
