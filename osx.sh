@@ -82,7 +82,6 @@ require_brew ack
 #require_brew beanstalkd
 # ln -sfv /usr/local/opt/beanstalk/*.plist ~/Library/LaunchAgents
 # launchctl load ~/Library/LaunchAgents/homebrew.mxcl.beanstalk.plist
-require_brew boot2docker
 # dos2unix converts windows newlines to unix newlines
 require_brew dos2unix
 # require_brew fig
@@ -94,7 +93,7 @@ require_brew fortune
 # skip those GUI clients, git command-line all the way
 require_brew git
 # yes, yes, use git-flow, please :)
-require_brew git-flow
+require_brew git-flow-avh
 #require_brew mercurial
 # why is everyone still not using GPG?
 #require_brew gnupg
@@ -110,7 +109,7 @@ require_brew imagemagick
 #require_brew jq
 # http://maven.apache.org/
 require_brew maven
-require_brew mysql
+#require_brew mysql
 #require_brew memcached
 require_brew nmap
 require_brew node
@@ -153,13 +152,14 @@ require_cask skitch
 #require_cask fantastical
 
 # tools
+require_cask dockertoolbox
 require_cask appcleaner
 require_cask sourcetree
 #require_cask macpass
 require_cask teamviewer
 require_cask transmit
 # require_cask superduper
-require_cask mysqlworkbench
+#require_cask mysqlworkbench
 #require_cask freefilesync
 require_cask disk-inventory-x
 #require_cask comicbooklover
