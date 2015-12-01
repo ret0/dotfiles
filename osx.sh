@@ -140,15 +140,15 @@ brew tap caskroom/versions > /dev/null 2>&1
 #require_cask amazon-cloud-drive
 #require_cask box-sync
 #require_cask dropbox
-require_cask google-drive # move to global?
+#require_cask google-drive # move to global?
 
 # communication
 #require_cask adium
 #require_cask slack
 
 # productivity
-require_cask evernote
-require_cask skitch
+#require_cask evernote
+#require_cask skitch
 #require_cask fantastical
 
 # tools
@@ -157,7 +157,7 @@ require_cask appcleaner
 require_cask sourcetree
 #require_cask macpass
 require_cask teamviewer
-require_cask transmit
+#require_cask transmit
 # require_cask superduper
 #require_cask mysqlworkbench
 #require_cask freefilesync
@@ -172,11 +172,11 @@ require_cask iterm2
 #require_cask lastpass-universal
 #require_cask macvim
 #require_cask sizeup
-require_cask cinch
-require_cask moom
+#require_cask cinch
+#require_cask moom
 require_cask hipchat
 require_cask keepassx
-require_cask time-sink
+#require_cask time-sink
 #require_cask simple-comic
 #require_cask sketchup
 require_cask sublime-text3
@@ -185,13 +185,13 @@ require_cask the-unarchiver
 #require_cask transmission
 require_cask vlc # move to global?
 #require_cask xquartz
-require_cask crashplan
+#require_cask crashplan
 require_cask spotify
-require_cask flux
+#require_cask flux
 
 # development browsers
 #require_cask breach
-require_cask firefox
+#require_cask firefox
 #require_cask firefox-aurora
 #require_cask google-chrome # move to global?
 #require_cask google-chrome-canary
@@ -297,9 +297,9 @@ sudo chflags uchg /Private/var/vm/sleepimage;ok
 #running "Set a custom wallpaper image"
 # `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
-rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-sudo ln -s ~/.dotfiles/img/twit.jpg /System/Library/CoreServices/DefaultDesktop.jpg;ok
+#rm -rf ~/Library/Application Support/Dock/desktoppicture.db
+#sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
+#sudo ln -s ~/.dotfiles/img/twit.jpg /System/Library/CoreServices/DefaultDesktop.jpg;ok
 
 
 ################################################
@@ -386,8 +386,8 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 running "Restart automatically if the computer freezes"
 sudo systemsetup -setrestartfreeze on;ok
 
-running "Never go into computer sleep mode"
-sudo systemsetup -setcomputersleep Off > /dev/null;ok
+#running "Never go into computer sleep mode"
+#sudo systemsetup -setcomputersleep Off > /dev/null;ok
 
 running "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1;ok
@@ -418,8 +418,8 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1;ok
 #defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 #defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true;ok
 
-running "Disable “natural” (Lion-style) scrolling"
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false;ok
+#running "Disable “natural” (Lion-style) scrolling"
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false;ok
 
 running "Increase sound quality for Bluetooth headphones/headsets"
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40;ok

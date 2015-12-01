@@ -59,16 +59,16 @@ sed -i 's/Thomas Tardy/'$firstname' '$lastname'/' .gitconfig > /dev/null 2>&1 | 
 if [[ ${PIPESTATUS[0]} != 0 ]]; then
   echo
   running "looks like you are using OSX sed rather than gnu-sed, accommodating"
-  sed -i '' 's/Thomas Tardy/'$firstname' '$lastname'/' .gitconfig;
-  sed -i '' 's/thomas.tardy@gmail.com/'$email'/' .gitconfig;
-  sed -i '' 's/wibbo/'$githubuser'/' .gitconfig;
-  sed -i '' 's/thomas/'$(whoami)'/g' .zshrc;ok
+  sed -i '' 's/Reto Kleeb/'$firstname' '$lastname'/' .gitconfig;
+  sed -i '' 's/retokl@gmail.com/'$email'/' .gitconfig;
+  sed -i '' 's/ret0/'$githubuser'/' .gitconfig;
+  sed -i '' 's/reto/'$(whoami)'/g' .zshrc;ok
 else
   echo
   bot "looks like you are already using gnu-sed. woot!"
-  sed -i 's/thomas.tardy@gmail.com/'$email'/' .gitconfig;
-  sed -i 's/wibbo/'$githubuser'/' .gitconfig;
-  sed -i 's/thomas/'$(whoami)'/g' .zshrc;ok
+  sed -i 's/retokl@gmail.com/'$email'/' .gitconfig;
+  sed -i 's/ret0/'$githubuser'/' .gitconfig;
+  sed -i 's/reto/'$(whoami)'/g' .zshrc;ok
 fi
 
 # read -r -p "OK? [Y/n] " response
