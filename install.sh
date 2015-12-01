@@ -55,7 +55,7 @@ running "replacing items in .gitconfig with your info ($COL_YELLOW$fullname, $em
 
 # test if gnu-sed or osx sed
 
-sed -i 's/Thomas Tardy/'$firstname' '$lastname'/' .gitconfig > /dev/null 2>&1 | true
+sed -i 's/Reto Kleeb/'$firstname' '$lastname'/' .gitconfig > /dev/null 2>&1 | true
 if [[ ${PIPESTATUS[0]} != 0 ]]; then
   echo
   running "looks like you are using OSX sed rather than gnu-sed, accommodating"
