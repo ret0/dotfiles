@@ -1,9 +1,9 @@
 [user]
-	name = Thomas Tardy
-	email = thomas.tardy@gmail.com
+	name = Reto Kleeb
+	email = kleeb@mptechnology.ch
 [github]
     # https://github.com/blog/180-local-github-config
-    user = wibbo
+    user = ret0
 
     # in a few months, look into the include directive (after bug fixes)
     token = MOVEALONG
@@ -41,7 +41,7 @@
 	fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/reto/.gitignore
 	quotepath = false
 	# line endings
 	# force LF during add
@@ -104,10 +104,10 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [difftool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/diffmerge/4.2.0.697/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/diffmerge/4.2.0.697/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.7/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean %f
