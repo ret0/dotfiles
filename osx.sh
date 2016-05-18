@@ -152,11 +152,11 @@ brew tap caskroom/versions > /dev/null 2>&1
 #require_cask fantastical
 
 # tools
-require_cask dockertoolbox
+#require_cask dockertoolbox
 require_cask appcleaner
 require_cask sourcetree
 #require_cask macpass
-require_cask teamviewer
+#require_cask teamviewer
 #require_cask transmit
 # require_cask superduper
 #require_cask mysqlworkbench
@@ -174,13 +174,13 @@ require_cask iterm2
 #require_cask sizeup
 #require_cask cinch
 #require_cask moom
-require_cask hipchat
+#require_cask hipchat
 require_cask keepassx
 #require_cask time-sink
 #require_cask simple-comic
 #require_cask sketchup
 require_cask sublime-text3
-#require_cask atom
+require_cask atom
 require_cask the-unarchiver
 #require_cask transmission
 require_cask vlc # move to global?
@@ -198,7 +198,7 @@ require_cask spotify
 #require_cask torbrowser
 
 # virtal machines
-require_cask virtualbox
+#require_cask virtualbox
 # chef-dk, berkshelf, etc
 #require_cask chefdk
 # vagrant for running dev environments using docker images
@@ -586,9 +586,9 @@ defaults write com.apple.dock launchanim -bool false;ok
 running "Speed up Mission Control animations"
 defaults write com.apple.dock expose-animation-duration -float 0.1;ok
 
-running "Don’t group windows by application in Mission Control"
+#running "Don’t group windows by application in Mission Control"
 # (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-bay-app -bool false;ok
+#defaults write com.apple.dock expose-group-bay-app -bool false;ok
 
 running "Disable Dashboard"
 defaults write com.apple.dashboard mcx-disabled -bool true;ok
@@ -604,8 +604,8 @@ defaults write com.apple.dock autohide-delay -float 0;ok
 running "Remove the animation when hiding/showing the Dock"
 defaults write com.apple.dock autohide-time-modifier -float 0;ok
 
-running "Automatically hide and show the Dock"
-defaults write com.apple.dock autohide -bool true;ok
+#running "Automatically hide and show the Dock"
+#defaults write com.apple.dock autohide -bool true;ok
 
 running "Make Dock icons of hidden applications translucent"
 defaults write com.apple.dock showhidden -bool true;ok

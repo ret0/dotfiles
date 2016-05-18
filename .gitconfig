@@ -35,7 +35,7 @@
 	untracked = cyan
 
 [advice]
-    statusHints = false
+    statusHints = true
 
 [gui]
 	fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
@@ -97,7 +97,7 @@
 [filter "tabspace"]
 	clean = expand -t 4
 [push]
-	default = matching
+	default = simple
     # default = current
 [filter "media"]
 	required = true
@@ -107,7 +107,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.7/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/reto/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean %f
