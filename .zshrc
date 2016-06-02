@@ -22,7 +22,7 @@ export CASE_SENSITIVE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(boot2docker bower brew brew-cask command-not-found compleat dirpersist docker gem git git-flow github jira mvn osx rvm screen z)
+plugins=(bower brew brew-cask command-not-found compleat dirpersist docker gem git git-flow github jira mvn osx rvm screen z docker-compose npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,4 +72,4 @@ unsetopt correct
 #}
 
 # run fortune on new terminal :)
-fortune
+#fortune

@@ -86,7 +86,7 @@ require_brew ack
 require_brew dos2unix
 # require_brew fig
 # fortune command--I source this as a better motd :)
-require_brew fortune
+#require_brew fortune
 #require_brew gawk
 # http://www.lcdf.org/gifsicle/ (because I'm a gif junky)
 #require_brew gifsicle
@@ -175,7 +175,7 @@ require_cask iterm2
 #require_cask cinch
 #require_cask moom
 #require_cask hipchat
-require_cask keepassx
+#require_cask keepassx
 #require_cask time-sink
 #require_cask simple-comic
 #require_cask sketchup
@@ -183,10 +183,10 @@ require_cask sublime-text3
 require_cask atom
 require_cask the-unarchiver
 #require_cask transmission
-require_cask vlc # move to global?
+#require_cask vlc # move to global?
 #require_cask xquartz
 #require_cask crashplan
-require_cask spotify
+#require_cask spotify
 #require_cask flux
 
 # development browsers
@@ -311,8 +311,8 @@ bot "Standard System Changes"
 running "allow 'locate' command"
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist > /dev/null 2>&1;ok
 
-running "Set standby delay to 24 hours (default is 1 hour)"
-sudo pmset -a standbydelay 86400;ok
+#running "Set standby delay to 24 hours (default is 1 hour)"
+#sudo pmset -a standbydelay 86400;ok
 
 running "Disable the sound effects on boot"
 sudo nvram SystemAudioVolume=" ";ok
@@ -489,8 +489,8 @@ defaults write com.apple.finder DisableAllAnimations -bool true;ok
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/";ok
 
-#running "Show hidden files by default"
-#defaults write com.apple.finder AppleShowAllFiles -bool true;ok
+running "Show hidden files by default"
+defaults write com.apple.finder AppleShowAllFiles -bool true;ok
 
 #running "Hide hidden files on Desktop"
 #defaults write com.apple.finder CreateDesktop -bool false;ok
@@ -687,23 +687,23 @@ bot "Configuring Mail"
 ###############################################################################
 
 
-running "Disable send and reply animations in Mail.app"
-defaults write com.apple.mail DisableReplyAnimations -bool true
-defaults write com.apple.mail DisableSendAnimations -bool true;ok
+#running "Disable send and reply animations in Mail.app"
+#defaults write com.apple.mail DisableReplyAnimations -bool true
+#defaults write com.apple.mail DisableSendAnimations -bool true;ok
 
-running "Copy email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false;ok
+#running "Copy email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
+#defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false;ok
 
-running "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9";ok
+#running "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
+#defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9";ok
 
-running "Display emails in threaded mode, sorted by date (oldest at the top)"
-defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
-defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
-defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date";ok
+#running "Display emails in threaded mode, sorted by date (oldest at the top)"
+#defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
+#defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
+#defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date";ok
 
-running "Disable inline attachments (just show the icons)"
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool true;ok
+#running "Disable inline attachments (just show the icons)"
+#defaults write com.apple.mail DisableInlineAttachmentViewing -bool true;ok
 
 #running "Disable automatic spell checking"
 #defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled";ok
@@ -846,11 +846,11 @@ defaults write com.apple.appstore ShowDebugMenu -bool true;ok
 bot "Messages"
 ###############################################################################
 
-running "Disable automatic emoji substitution (i.e. use plain text smileys)"
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false;ok
+#running "Disable automatic emoji substitution (i.e. use plain text smileys)"
+#defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false;ok
 
-running "Disable smart quotes as it’s annoying for messages that contain code"
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false;ok
+#running "Disable smart quotes as it’s annoying for messages that contain code"
+#defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false;ok
 
 running "Disable continuous spell checking"
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false;ok
@@ -906,6 +906,7 @@ require_npm trash
 require_npm vtop
 require_npm yo
 require_npm generator-jhipster
+require_npm eslint
 
 ###############################################################################
 bot "Ruby Gems..."
